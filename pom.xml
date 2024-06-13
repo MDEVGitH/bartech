@@ -137,6 +137,5 @@
     <modules>
         <module>businessdomain</module>
         <module>infraestructuradomain</module>
-      <module>businessdomain/playlist</module>
     </modules>
 </project>
