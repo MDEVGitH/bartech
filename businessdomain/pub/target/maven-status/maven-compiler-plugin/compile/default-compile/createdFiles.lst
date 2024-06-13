@@ -1,0 +1,4 @@
+com/paymentchain/pub/entities/Pub.class
+com/paymentchain/pub/controller/PubRestController.class
+com/paymentchain/pub/PubApplication.class
+com/paymentchain/pub/respository/PubRepository.class

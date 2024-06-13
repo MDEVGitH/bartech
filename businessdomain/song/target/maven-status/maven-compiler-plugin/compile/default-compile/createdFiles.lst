@@ -1,0 +1,4 @@
+com/paymentchain/song/respository/SongRepository.class
+com/paymentchain/song/SongApplication.class
+com/paymentchain/song/entities/Song.class
+com/paymentchain/song/controller/SongRestController.class
