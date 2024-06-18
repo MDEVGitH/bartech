@@ -23,6 +23,8 @@ spring:
           uri: lb://businessdomain-user
           predicates:
             - Path=/user/V1/**
+          filters:
+            - AuthFilter
         - id: businessdomain-song
           uri: lb://businessdomain-song
           predicates:
@@ -31,3 +33,7 @@ spring:
           uri: lb://businessdomain-pub
           predicates:
             - Path=/pub/V1/**
+        - id: businessdomain-auth
+          uri: lb://businessdomain-auth
+          predicates:
+            - Path=/auth/V1/**

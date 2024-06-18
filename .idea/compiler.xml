@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="eurekaserver" />
         <module name="song" />
+        <module name="auth-service" />
         <module name="pub" />
         <module name="user" />
         <module name="gateway-service" />
@@ -20,6 +21,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="auth-service" options="" />
       <module name="gateway-service" options="-parameters" />
     </option>
   </component>

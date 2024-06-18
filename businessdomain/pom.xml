@@ -17,6 +17,7 @@
         <module>user</module>
         <module>pub</module>
         <module>song</module>
+        <module>auth-service</module>
     </modules>
 
 
@@ -109,6 +110,10 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bootstrap</artifactId>
         </dependency>
     </dependencies>
 </project>
