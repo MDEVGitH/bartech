@@ -17,6 +17,7 @@
 		<java.version>17</java.version>
 		<spring-cloud.version>2023.0.2</spring-cloud.version>
 		<org.lombo.version>1.18.30</org.lombo.version>
+		<dockerfile-maven-version>1.4.13</dockerfile-maven-version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -76,6 +77,28 @@
 							<artifactId>lombok</artifactId>
 						</exclude>
 					</excludes>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>com.spotify</groupId>
+				<artifactId>dockerfile-maven-plugin</artifactId>
+				<version>${dockerfile-maven-version}</version>
+				<executions>
+					<execution>
+						<id>build-docker-image</id>
+						<phase>package</phase>
+						<goals>
+							<goal>build</goal>
+							<goal>push</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<repository>bartech/microservice-docker-${project.artifactId}</repository>
+					<tag>${project.version}</tag>
+					<buildArgs>
+						<JAR_FILE>/target/${project.build.finalName}.jar</JAR_FILE>
+					</buildArgs>
 				</configuration>
 			</plugin>
 		</plugins>

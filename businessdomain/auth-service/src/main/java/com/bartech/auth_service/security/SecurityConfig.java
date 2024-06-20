@@ -18,7 +18,7 @@ public class SecurityConfig {
             .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
             .and()
             .authorizeHttpRequests()
-            .requestMatchers("auth/V1/**", "user/V1/**")
+            .requestMatchers("auth/V1/**")
             .permitAll().anyRequest().authenticated();
         return http.build();
     }

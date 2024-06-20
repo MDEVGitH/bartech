@@ -5,12 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-         <groupId>com.paymentchain.businessdomain</groupId>
+         <groupId>com.bartech.businessdomain</groupId>
         <artifactId>businessdomain</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <groupId>com.paymentchain</groupId>
+    <groupId>com.bartech</groupId>
     <artifactId>user</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>user</name>
@@ -24,6 +24,18 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <excludes>
+                        <exclude>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                        </exclude>
+                    </excludes>
+                </configuration>
             </plugin>
         </plugins>
     </build>

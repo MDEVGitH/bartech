@@ -5,10 +5,8 @@ eureka:
   client:
     fetch-registry: true
     register-with-eureka: true
-    service-url:
-      default-zone: http://localhost:8761/eureka
-  instance:
-    hostname: localhost
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVER:http://localhost:8761/eureka}
 
 spring:
   application:
@@ -29,10 +27,14 @@ spring:
           uri: lb://businessdomain-song
           predicates:
             - Path=/playlist/V1/**
+          filters:
+            - AuthFilter
         - id: businessdomain-pub
           uri: lb://businessdomain-pub
           predicates:
             - Path=/pub/V1/**
+          filters:
+            - AuthFilter
         - id: businessdomain-auth
           uri: lb://businessdomain-auth
           predicates:
