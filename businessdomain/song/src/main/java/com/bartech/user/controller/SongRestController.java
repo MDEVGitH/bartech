@@ -12,6 +12,7 @@ import org.springframework.http.ResponseEntity;
 
 @RestController
 @RequestMapping("/playlist/V1")
+@CrossOrigin(origins = "*")
 public class SongRestController {
 
     @Autowired
