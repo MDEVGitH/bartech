@@ -13,7 +13,7 @@ services:
 
   user:
     container_name: user
-    image: msanchezsevi/microservice-docker-user:0.0.2-SNAPSHOT
+    image: msanchezsevi/microservice-docker-user:0.0.3-SNAPSHOT
     environment:
       - JAVA_OPTS=
         -Xms256M
@@ -26,7 +26,7 @@ services:
 
   auth:
     container_name: auth
-    image: msanchezsevi/microservice-docker-auth-service:0.0.2-SNAPSHOT
+    image: msanchezsevi/microservice-docker-auth-service:0.0.3-SNAPSHOT
     environment:
       - JAVA_OPTS=
         -Xms256M
@@ -40,7 +40,7 @@ services:
 
   pub:
     container_name: pub
-    image: msanchezsevi/microservice-docker-pub:0.0.2-SNAPSHOT
+    image: msanchezsevi/microservice-docker-pub:0.0.3-SNAPSHOT
     environment:
       - JAVA_OPTS=
         -Xms256M
@@ -54,7 +54,7 @@ services:
 
   song:
     container_name: song
-    image: msanchezsevi/microservice-docker-song:0.0.2-SNAPSHOT
+    image: msanchezsevi/microservice-docker-song:0.0.3-SNAPSHOT
     environment:
       - JAVA_OPTS=
         -Xms256M

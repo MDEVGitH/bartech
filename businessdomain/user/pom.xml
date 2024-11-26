@@ -12,7 +12,7 @@
 
     <groupId>com.bartech</groupId>
     <artifactId>user</artifactId>
-    <version>0.0.2-SNAPSHOT</version>
+    <version>0.0.3-SNAPSHOT</version>
     <name>user</name>
     <description>Demo project for Spring Boot</description>
 
